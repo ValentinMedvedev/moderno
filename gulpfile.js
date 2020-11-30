@@ -8,6 +8,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer')
 const del = require('del');
 const imagemin = require('gulp-imagemin');
+// const cssmin = require('gulp-cssmin');
 
 let path ={
     build: {
@@ -51,17 +52,29 @@ function scripts() {
 }
 
 function styles(){
-    return src('app/scss/style.scss')
+    // return src('app/scss/style.scss')
+    return src('app/scss/**/*.scss')
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             // Отслеживание на 10 последних версий браузеров
-            overrideBrowserslist: ['last 10 version', 'IE 9'],
+            overrideBrowserslist: ['last 10 version', 'IE 11'],
             // Для IE11 grid
             grid: true
         }))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
+}
+
+function library() {
+    return src([
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+    ])
+    .pipe(concat('libs.min.css'))
+    .pipe(cssmin())
+    .pipe(dest('app/css'))
 }
 
 function images() {
@@ -98,6 +111,7 @@ function buildhtml() {
 function build() {
     return src([
         // Собрали
+        'app/css/libs.min.css',
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js'
@@ -125,6 +139,7 @@ function watching() {
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 }
 
+exports.library = library;
 exports.styles = styles;
 exports.watching = watching;
 // Смотри внимательно sync с маленькой буквы это название функции
