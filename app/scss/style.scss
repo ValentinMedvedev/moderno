@@ -1,6 +1,62 @@
-:root{
-    box-sizing: border-box;
+
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 91px;
+    align-items: center;
 }
-*, *::after, *::before{
-    box-sizing: inherit;
+.headet__text {
+    //сдвигаем максимально в право
+    margin-left: auto;
+    margin-right: 50px;
+    // margin: 0 25px 0 auto;
+    >a>span{
+        color: $red;
+    }
 }
+.header__phone {
+}
+.header__box {
+}
+.basket {
+}
+.header__btn {
+    padding: 4px 0;
+    width: 72px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+}
+    .header__btn-login{
+        background-color: $green;
+        margin-right: 7px;
+    }
+    .header__btn-register{
+        background-color: $red;
+    }
+.header__menu{
+    background-color: $bc-menu;
+}
+    .menu{
+        display: flex;
+        align-items: center;
+        height: 60px;        
+    }
+        .menu__list{
+            li{
+                display: inline-block;
+                & + li{
+                    margin-left: 38px;
+                }
+            }
+            a{
+                color: #fff;
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
