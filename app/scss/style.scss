@@ -1,3 +1,138 @@
 
 @import 'vars';
 @import 'global';
+@import 'fonts';
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    height: 91px;
+    align-items: center;
+}
+.headet__text {
+    //сдвигаем максимально в право
+    margin-left: auto;
+    margin-right: 50px;
+    // margin: 0 25px 0 auto;
+    >a>span{
+        color: $red;
+    }
+}
+.header__phone {
+}
+.header__box {
+}
+.basket {
+}
+.header__btn {
+    padding: 4px 0;
+    width: 72px;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+}
+    .header__btn-login{
+        background-color: $green;
+        margin-right: 7px;
+    }
+    .header__btn-register{
+        background-color: $red;
+    }
+.header__menu{
+    background-color: $bc-menu;
+}
+    .menu{
+        display: flex;
+        align-items: center;
+        height: 60px;        
+    }
+        .menu__list{
+            li{
+                display: inline-block;
+                & + li{
+                    margin-left: 38px;
+                }
+            }
+            a{
+                color: #fff;
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+.search{
+    // Для функцианала BackEnd смены фонового изображения, переносим background-image: в html inline-style
+    // background-image: url(../images/bc-search.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 532px;
+}
+.search__inner{
+    padding: 150px 0 100px;
+    color: #fff;
+    text-align: center;
+    &-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 52px;
+        padding-bottom: 27px;
+    }
+    &-text {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 49px;
+        font-weight: 500;
+    }
+    &-form {
+        max-width: 670px;
+        //Вместо  text-align: center пишем см. ниже
+        margin: 0 auto;
+        position: relative;
+        input {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 30px;
+            letter-spacing: .5pt;
+            width: 100%;
+            height: 56px;
+            border: none;
+            padding: 0 60px 0 25px;
+            box-shadow: 0 1px 10px 0 rgba(124, 178, 64, 0.75);
+            border-radius: 4px;
+            outline: none;
+            color: $input;
+            &::placeholder{
+                color: $input;
+                font-weight: 500;
+            }
+            //Для любителей клавиатуры
+            &:focus{
+                border: 1px solid greenyellow;
+            }
+        }
+        button{
+            position: absolute;
+            border: none;
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            right: 25px;
+            top: 19px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
+// position: relative;
+//                 &::after{
+//                     position: absolute;
+//                     content: url(../images/magnifier.png);
+//                     // content: '';
+//                     // background-image: url(../images/magnifier.png);
+//                     width: 20px;
+//                     height: 20px;
+//                     right: 20px;
+//                     top: 19px;
+

@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer')
 const del = require('del');
 const imagemin = require('gulp-imagemin');
-// const cssmin = require('gulp-cssmin');
+const cssmin = require('gulp-cssmin');
 
 let path ={
     build: {
@@ -54,7 +54,8 @@ function scripts() {
 function styles(){
     // return src('app/scss/style.scss')
     return src('app/scss/**/*.scss')
-        .pipe(scss({outputStyle: 'compressed'}))
+        //.pipe(scss({outputStyle: 'compressed'}))
+        .pipe(scss({outputStyle: 'expanted'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             // Отслеживание на 10 последних версий браузеров
@@ -150,4 +151,4 @@ exports.build = series(clean, images, buildhtml, build);
 exports.buildhtml = buildhtml;
 exports.clean = clean;
 // Запускаем парралельно с помощью parallel и browsersync и watching
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(library, styles, scripts, browsersync, watching);

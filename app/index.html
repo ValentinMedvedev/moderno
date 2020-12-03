@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/libs.min.css">
         <link rel="stylesheet" href="css/style.min.css">
         <title>Document</title>
     </head>
     <body>
         <header class="header">
-            <div class="container">
-                <div class="header__top">
+            <div class="header__top">
+                <div class="container">
                     <div class="header__top-inner">
                         <div class="header__logo">
                             <a href="#">
@@ -19,34 +20,78 @@
                         </div>
                         <div class="headet__text">
                             <a href="#">
-                                <span>Need help?</span> Talk to an expert: <a class="header__phone" href="tel:61383766284">+61 3 8376 6284</a>
+                                <span>Need help?</span>
                             </a>
+                            Talk to an expert: <a class="header__phone" href="tel:61383766284">+61 3 8376 6284</a>
                         </div>
                         <div class="header__box">
                             <a class="basket" href="#"></a>
-                            <a href="#" class="header__btn">Login</a>   
-                            <a href="#" class="header__btn">Register</a>
+                            <a href="#" class="header__btn header__btn-login">Login</a>   
+                            <a href="#" class="header__btn header__btn-register">Register</a>
                         </div>
                     </div>
                 </div>
-                <div class="header__menu">
+            </div>
+            <div class="header__menu">
+                <div class="container">
                     <nav class="menu">
                         <ul class="menu__list">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">WordPress</a></li>
-                            <li><a href="#">Joomla</a></li>
-                            <li><a href="#">PSD</a></li>
-                            <li><a href="#">Plugins</a></li>
-                            <li><a href="#">Components</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Help</a></li>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">WordPress</a>
+                            </li>
+                            <li>
+                                <a href="#">Joomla</a
+                                ></li>
+                            <li>
+                                <a href="#">PSD</a>
+                            </li>
+                            <li>
+                                <a href="#">Plugins</a>
+                            </li>
+                            <li>
+                                <a href="#">Components</a>
+                            </li>
+                            <li>
+                                <a href="#">Pages</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
+    
+        <section class="search" style="background-image: url(images/bc-search.jpg);">
+            <div class="container">
+                <div class="search__inner">
+                    <div class="search__inner-title">
+                        Welcome To Foxtar Market Place!
+                    </div>
+                    <div class="search__inner-text">
+                        Premium WordPress Themes, Web Templates and Many More ...
+                    </div>
+                    <form class="search__inner-form">
+                        <!-- Псевдо-элементы ::after ::before с input, textarea НЕРАБОТАЮТ! -->
+                        <input class="search__form-input" placeholder="Search Your Keywords . . ." required>
+                        <button type="submit">
+                            <!-- Переделать на svg -->
+                            <img src="images/icons/magnifier.png" alt="">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
         <script src="js/libs.min.js"></script>
         <script src="js/main.min.js"></script>
     </body>
