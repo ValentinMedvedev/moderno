@@ -27,3 +27,14 @@ body{
     margin: 0 auto;
     padding: 0 15px;
 }
+.container-fluid{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+// Для маленьких устройств
+@media (max-width: 720px){
+    .container-fluid{
+        padding: 0 15px;
+    }
+}
