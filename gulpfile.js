@@ -9,6 +9,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const del = require('del');
 const imagemin = require('gulp-imagemin');
 const cssmin = require('gulp-cssmin');
+const mixer = mixitup('.container');
 
 let path ={
     build: {
@@ -43,6 +44,7 @@ function browsersync(){
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'
     ])
         .pipe(concat('main.min.js'))
