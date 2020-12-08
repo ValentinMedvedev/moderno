@@ -101,15 +101,15 @@
                 </div>
                 <div class="products__inner">
                     <div class="products__inner-btn">
-                        <button>All</button>
-                        <button>WordPress</button>
-                        <button>Joomla</button>
-                        <button>Plugins</button>
-                        <button>Component</button>
-                        <button>PSD</button>
+                        <button type="button" data-filter="all">All</button>
+                        <button type="button" data-filter=".wordpress">WordPress</button>
+                        <button type="button" data-filter=".joomla">Joomla</button>
+                        <button type="button" data-filter=".plugins">Plugins</button>
+                        <button type="button" data-filter=".component">Component</button>
+                        <button type="button" data-filter=".psd">PSD</button>
                     </div>
                     <div class="products__inner-box">
-                        <div class="product__item">
+                        <div class="product__item mix wordpress new popular" data-order="1">
                             <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
                             <div class="product__item-content">
                                 <div class="product__item-name">
@@ -125,15 +125,194 @@
                                 </div>
                             </div>
                             <div class="product__item-info">
-                                <div class="product__item-auther">
+                                <a class="product__item-auther" href="#">
                                     <span style="background-image: url(images/content/user.jpg);"></span>
                                     Radiustheme
-                                </div>
-                                <div class="product__item-star">
+                                </a>
+                                <div class="product__item-star" href="#">
                                     (05)
                                 </div>
                             </div>
                         </div>
+                        <div class="product__item mix joomla popular" data-order="2">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item mix wordpress new" data-order="3">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item mix psd new" data-order="4">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item mix wordpress popular" data-order="5">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item mix plugins popular new" data-order="6">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item mix wordpress new" data-order="7">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__item mix component popular" data-order="8">
+                            <a class="product__item-img" style="background-image: url(images/content/product-item-1.jpg);" href="#"></a>
+                            <div class="product__item-content">
+                                <div class="product__item-name">
+                                    <a class="product__item-title" href="#">
+                                        Responsive Mobile APP
+                                    </a>
+                                    <a class="product__item-category" href="#">
+                                        Site Template
+                                    </a>
+                                </div>
+                                <div class="product__item-price">
+                                    $19
+                                </div>
+                            </div>
+                            <div class="product__item-info">
+                                <a class="product__item-auther" href="#">
+                                    <span style="background-image: url(images/content/user.jpg);"></span>
+                                    Radiustheme
+                                </a>
+                                <div class="product__item-star" href="#">
+                                    (05)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products__bottom-btn">
+                        <button type="button" data-filter=".new">All New Items</button>
+                        <button type="button" data-filter=".popular">Popular Items</button>
                     </div>
                 </div>
             </div>
