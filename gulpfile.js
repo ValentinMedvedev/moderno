@@ -9,7 +9,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const del = require('del');
 const imagemin = require('gulp-imagemin');
 const cssmin = require('gulp-cssmin');
-const mixer = mixitup('.container');
+// const mixer = mixitup('.container');
 
 let path ={
     build: {
