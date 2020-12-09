@@ -9,6 +9,13 @@ $(function () {
         fullStar: true
         //numStars: 10
         //maxValue: 2                    
-      });
+    });
+    $('.product-slide__inner').slick({
+        dots: true,
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        // centerMode: true,
+        // centerPadding: '80px'
+    });
 })
-    
