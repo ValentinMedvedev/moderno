@@ -3,6 +3,7 @@
 @import 'global';
 @import 'fonts';
 
+//start header
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -60,6 +61,8 @@
                 line-height: 30px;
             }
         }
+//end header
+//start search
 .search{
     // Для функцианала BackEnd смены фонового изображения, переносим background-image: в html inline-style
     // background-image: url(../images/bc-search.jpg);
@@ -125,3 +128,136 @@
         }
     }
 }
+//end search
+//start products
+.products{
+    padding: 110px 0;
+    background-color: $bc-product;
+}
+    .products__title{
+        font-size: 36px;
+        line-height: 60px;
+        font-weight: 700;
+        text-align: center;
+        color: $bc-menu;
+    }
+    .products__inner{
+        &-btn{
+            margin-bottom: 60px;
+            text-align: center;
+            color: $bc-menu;
+            button{
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+                padding: 12px 21px;
+                background-color: #fff;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                &.mixitup-control-active{
+                    background-color: $red;
+                    color: #fff;
+                    transition: all .5s;
+                }
+                & + button{
+                    margin-left: 5px;// +1 border
+                }
+            }
+        }
+        &-box{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .product__item{
+        max-width: 442px;
+        width: 100%;
+        box-shadow: 0 1px 2px 0 rgba(205,214,222, .75);
+        margin-bottom: 30px;
+        background-color: #fff;
+        &-img{
+            min-height: 250px;
+            //так как ссылка делаем ее блочную, что бы нормально изображение отображалось
+            display: block;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &-content{
+            display: flex;
+            justify-content: space-between;
+            //Паддинг сверху и снизу 10 на всякий случай
+            padding: 10px 31px;
+            min-height: 90px;
+            align-items: center;
+            border-bottom: 1px solid #e7ecf2;
+        }
+        &-name{
+            max-width: 310px;
+            font-weight: 500;
+            color: $bc-menu;
+        }
+        &-title{
+            font-size: 18px;
+            display: block;
+        }
+        &-category{
+            font-size: 14px;
+            display: block;
+            color: $green;
+        }
+        &-price{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &-info{
+            display: flex;
+            justify-content: space-between;
+            min-height: 68px;
+            align-items: center;
+            padding: 10px 31px;
+        }
+        &-auther{
+            font-size: 14px;
+            font-weight: 500;
+            span{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background-position: center;
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-right: 14px;
+                // Выравнивает все элементы: картинку, автора и product__item-star (05), а Вадим недопер
+                vertical-align: middle;
+            }
+        }
+        &-star{
+            // vertical-align: middle;
+        }
+    }
+    .products__bottom-btn{
+        text-align: center;
+        button{
+            //margin-top Всего 75, т.к. отступ .product__item -> margin-bottom: 30px;
+            margin: 45px 5px 0;
+            padding: 20px 32px;
+            font-size: 16px;
+            background-color: #fff;
+            border: none;
+            box-shadow: 0 1px 3px 0 rgba(204, 216, 228, .75);
+            color: $bc-menu;
+            cursor: pointer;
+            outline: none;
+            &.mixitup-control-active{
+                background-color: $red;
+                color: #fff;
+                transition: all .5s;
+            }
+        }
+    }
+
+//end products

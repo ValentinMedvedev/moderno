@@ -9,7 +9,6 @@ const autoprefixer = require('gulp-autoprefixer')
 const del = require('del');
 const imagemin = require('gulp-imagemin');
 const cssmin = require('gulp-cssmin');
-// const mixer = mixitup('.container');
 
 let path ={
     build: {
@@ -43,11 +42,22 @@ function browsersync(){
 
 function scripts() {
     return src([
-        'node_modules/jquery/dist/jquery.js',
-        'node_modules/mixitup/dist/mixitup.js',
         'app/js/main.js'
     ])
         .pipe(concat('main.min.js'))
+        .pipe(uglify())
+        .pipe(dest('app/js'))
+        .pipe(browserSync.stream())
+}
+
+function libraryjs() {
+    return src([
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+    ])
+        .pipe(concat('libs.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
         .pipe(browserSync.stream())
@@ -69,7 +79,7 @@ function styles(){
         .pipe(browserSync.stream())
 }
 
-function library() {
+function librarycss() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/slick-carousel/slick/slick.css',
@@ -142,7 +152,8 @@ function watching() {
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 }
 
-exports.library = library;
+exports.libraryjs = libraryjs;
+exports.librarycss = librarycss;
 exports.styles = styles;
 exports.watching = watching;
 // Смотри внимательно sync с маленькой буквы это название функции
@@ -153,4 +164,4 @@ exports.build = series(clean, images, buildhtml, build);
 exports.buildhtml = buildhtml;
 exports.clean = clean;
 // Запускаем парралельно с помощью parallel и browsersync и watching
-exports.default = parallel(library, styles, scripts, browsersync, watching);
+exports.default = parallel(librarycss, styles,  libraryjs, scripts, browsersync, watching);
