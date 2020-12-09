@@ -4,6 +4,7 @@
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
+    "@rateyo/jquery": "^3.0.0-alpha.2",
     "browser-sync": "^2.26.13",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
