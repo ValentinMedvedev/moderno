@@ -296,4 +296,31 @@
         }
     }
 }
-    
+//end product-slider
+//start tutorials
+.tutorials{
+    padding: 75px 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 370px;
+        width: 100%;
+        &-images{
+            min-height: 270px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &-title{
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            // @include f700;
+            background-color: #f8f8f8;
+            padding: 37px 10px;
+            text-align: center;
+        }
+    }
+}
