@@ -22,6 +22,27 @@
 .header__phone {
 }
 .header__box {
+    a.basket{
+        margin: 0 27px 0 -30px;
+        border-radius: 50%;
+        width: 34px;
+        height: 34px;
+        background-color: #f5f5f5;
+        vertical-align: middle;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: "\f07a";
+            color: #a0a0a0;
+            font-family: 'icomoon';
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            top: 5px;
+            left: 0;
+            right: 0;
+        }
+    }
 }
 .basket {
 }
@@ -296,4 +317,176 @@
         }
     }
 }
-    
+//end product-slider
+//start tutorials
+.tutorials{
+    padding: 75px 0 120px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 370px;
+        width: 100%;
+        &-images{
+            min-height: 270px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &-title{
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: bold;
+            // @include f700;
+            background-color: #f8f8f8;
+            padding: 37px 10px;
+            text-align: center;
+        }
+    }
+}
+//end tutorials
+//start footer
+.footer{
+    background-color: $bc-menu;
+    padding-top: 110px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        width: 275px;
+        &-title{
+            font-family: 'Raleway', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 24px;
+            color: #fff;
+            margin-bottom: 22px;
+        }
+        &-line{
+            border-bottom: 3px solid $green;
+            width: 51px;
+            margin-bottom: 32px;
+        }
+        &-social{
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 34px;
+        }
+        &-subtitle{
+            font-size: 20px;
+            line-height: 36px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        &-text{
+            color: #b7c3c8;
+            margin-bottom: 35px;
+        }
+        &-adress{
+            font-family: 'Lato', serif;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 24px;
+            margin-left: 30px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "\f041";
+                color: $green;
+                font-family: 'icomoon';
+                font-size: 18px;
+                line-height: 36px;
+                left: -30px;
+                top: -6px;
+            }
+        }
+        &-phone{
+            color: #fff;
+            font-family: 'Lato', serif;
+            font-weight: 600;
+            margin-left: 30px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "\f095";
+                color: $green;
+                font-family: 'icomoon';
+                font-size: 18px;
+                line-height: 36px;
+                left: -30px;
+                top: -8px;
+            }
+        }
+        &-list{
+            line-height: 36px;
+            li{
+                position: relative;
+                margin-left: 22px;
+                &::before{
+                    position: absolute;
+                    content: "\f105";
+                    color: $green;
+                    font-family: 'icomoon';
+                    font-size: 18px;
+                    line-height: 36px;
+                    left: -22px;
+                }
+            }
+        }
+        &-form{
+            min-width: 260px;
+            position: relative;
+            input{
+                font-size: 14px;
+                line-height: 36px;
+                width: 100%;
+                height: 38px;
+                color: #697378;
+                outline: none;
+                border: none;
+                background-color: #2f3c43;
+                padding: 0 50px 0 5px;
+            }
+            button{
+                position: absolute;
+                border: none;
+                background-color: $green;
+                width: 43px;
+                height: 38px;
+                right: 0;
+                outline: none;
+                cursor: pointer;
+                &::before{
+                    position: absolute;
+                    content: "\f124";
+                    color: #fff;
+                    font-family: 'icomoon';
+                    font-size: 20px;
+                    line-height: 36px;
+                    left: 0;
+                    top: 0px;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &__copyright{
+        border-top: 1px solid #424d53;
+        margin-top: 95px;
+        text-align: center;
+        line-height: 36px;
+        padding: 27px 0 35px;
+    }
+    .too{
+        width: 220px;
+    }
+    .tree{
+        width: 170px;
+    }
+    .foo{
+        width: 261px;
+    }
+}
