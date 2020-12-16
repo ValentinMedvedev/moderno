@@ -355,7 +355,8 @@
         justify-content: space-between;
     }
     &__item{
-        width: 275px;
+        max-width: 275px;
+        width: 100%;
         &-title{
             font-family: 'Raleway', sans-serif;
             font-size: 22px;
@@ -368,11 +369,37 @@
             border-bottom: 3px solid $green;
             width: 51px;
             margin-bottom: 32px;
+            padding-left: 2px;
+            // Вместо этого есть еще один вариант
+            // position: relative;
+            // .footer__item-title::after{
+            //     position: absolute;
+            //     content: '';
+            //     bottom: 0;
+            //     left: 2px;
+            //     width: 51px;
+            //     height: 3px;
+            //     background-color: $green;
+            // }
         }
         &-social{
-            width: 170px;
-            display: flex;
-            justify-content: space-between;
+            // width: 170px;
+            // display: flex;
+            // justify-content: space-between;
+            // margin-bottom: 34px;
+            // **************************************************************************************************
+            // переделываем по css sprites
+            li{
+                display: inline-block;
+                a{
+                    width: 28px;
+                    height: 28px;
+                    background-image: url(../images/sprite.png);
+                }
+                & + li{
+                    margin-left: 7px;
+                }
+            }
             margin-bottom: 34px;
         }
         &-subtitle{
@@ -390,7 +417,7 @@
             font-weight: 600;
             color: #fff;
             margin-bottom: 24px;
-            margin-left: 30px;
+            padding-left: 30px;
             position: relative;
             &::before{
                 position: absolute;
@@ -399,7 +426,7 @@
                 font-family: 'icomoon';
                 font-size: 18px;
                 line-height: 36px;
-                left: -30px;
+                left: 0;
                 top: -6px;
             }
         }
@@ -407,7 +434,7 @@
             color: #fff;
             font-family: 'Lato', serif;
             font-weight: 600;
-            margin-left: 30px;
+            padding-left: 30px;
             position: relative;
             &::before{
                 position: absolute;
@@ -416,15 +443,15 @@
                 font-family: 'icomoon';
                 font-size: 18px;
                 line-height: 36px;
-                left: -30px;
-                top: -8px;
+                left: 0;
+                top: -6px;
             }
         }
         &-list{
             line-height: 36px;
             li{
                 position: relative;
-                margin-left: 22px;
+                padding-left: 22px;
                 &::before{
                     position: absolute;
                     content: "\f105";
@@ -432,7 +459,7 @@
                     font-family: 'icomoon';
                     font-size: 18px;
                     line-height: 36px;
-                    left: -22px;
+                    left: 0;
                 }
             }
         }
@@ -442,13 +469,17 @@
             input{
                 font-size: 14px;
                 line-height: 36px;
+                // display: block;
                 width: 100%;
                 height: 38px;
-                color: #697378;
+                color: #fff;
                 outline: none;
                 border: none;
                 background-color: #2f3c43;
-                padding: 0 50px 0 5px;
+                padding: 0 50px 0 10px;
+                &::placeholder{
+                    color: #697378;
+                }
             }
             button{
                 position: absolute;
@@ -467,7 +498,7 @@
                     font-size: 20px;
                     line-height: 36px;
                     left: 0;
-                    top: 0px;
+                    top: 0;
                     right: 0;
                 }
             }
@@ -479,14 +510,28 @@
         text-align: center;
         line-height: 36px;
         padding: 27px 0 35px;
+        color: #919699;
     }
     .too{
-        width: 220px;
+        max-width: 220px;
     }
     .tree{
-        width: 170px;
+        max-width: 170px;
     }
     .foo{
-        width: 261px;
+        max-width: 261px;
     }
+}
+
+.link-twitter {
+    background-position: -28px 0;
+}
+.link-youtube {
+    background-position: -56px 0;
+}
+.link-pinterest {
+    background-position: -84px 0;
+}
+.link-linledin {
+    background-position: -112px 0;
 }
