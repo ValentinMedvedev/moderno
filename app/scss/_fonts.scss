@@ -33,9 +33,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-//   .icon-envelope-o:before {
-//     content: "\f003";
-//   }
+  .icon-envelope-o:before {
+    content: "\f003";
+  }
 //   .icon-check:before {
 //     content: "\f00c";
 //   }
@@ -78,3 +78,6 @@
 //   .icon-quote-right:before {
 //     content: "\f10e";
 //   }
+.icon-bell-o:before {
+  content: "\f0a2";
+}
